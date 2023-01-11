@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+<input type=button style="float:right;" value="back" class="" onClick="javascript:history.go(-1);">
+
+<h1>Register</h1>
+<br>
+
+<form method="post">
+    {% csrf_token %}
+{{ form.as_p}}
+    <input type="submit">
+</form>
+<br>
+
+<p>already have an account?<a href="{% url 'login' %}">Login</a></p>
+
+{% endblock %}

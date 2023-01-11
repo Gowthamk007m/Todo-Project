@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<input type=button style="float:right;" value="back" class="" onClick="javascript:history.go(-1);">
+
+<form method="post">
+    {% csrf_token %}
+    <h4>Are you sure that you want to delete {{i.}}</h4>
+    <input type="submit" >
+</form>
+
+
+
+{% endblock %}
